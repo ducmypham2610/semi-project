@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\UserListController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +22,34 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'user'], function() {
+    Route::get('/login',[LoginController::class,'getLogin']);
+    Route::post('/login',[LoginController::class,'postLogin']);
+    Route::get('/register',[LoginController::class,'getRegister']);
+    Route::post('/register',[LoginController::class,'postRegister']);
+    Route::get('/addUser',[UserListController::class,'getAddUser']);
+    Route::post('/addUser',[UserListController::class,'postAddUser']);
     Route::get('/listUsers',[UserListController::class,'getData']);
+    Route::get('/delete/{user_id}',[UserListController::class,'deleteUser']);
+    Route::get('/update/{user_id}',[UserListController::class,'updateUser']);
+    Route::post('/update',[UserListController::class,'saveData']);
+});
+
+Route::group(['prefix' => 'category'], function() {
+    Route::view('/addCategory','admin.pages.categoryManagement.addCategory');
+    Route::get('/listCategories',[CategoryController::class,'index']);
+    Route::get('/create',[CategoryController::class,'getAdd']);
+    Route::post('/create',[CategoryController::class,'postAdd']);
+    Route::get('/delete/{category_id}',[CategoryController::class,'deleteCategory']);
+    Route::get('/update/{category_id}',[CategoryController::class,'updateCategory']);
+    Route::post('/update',[CategoryController::class,'saveData']);
+});
+
+Route::group(['prefix' => 'product'], function() {
+    Route::view('/addProduct','admin.pages.productManagement.addProduct');
+    Route::get('/listProducts',[ProductController::class,'index']);
+    Route::get('/create',[ProductController::class,'getAdd']);
+    Route::post('/create',[ProductController::class,'postAdd']);
+    Route::get('/delete/{Product_id}',[ProductController::class,'deleteProduct']);
+    Route::get('/update/{Product_id}',[ProductController::class,'updateProduct']);
+    Route::post('/update',[ProductController::class,'saveData']);
 });

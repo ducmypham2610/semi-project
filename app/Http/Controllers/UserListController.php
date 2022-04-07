@@ -11,4 +11,43 @@ class UserListController extends Controller
         $user = User::paginate(10);
         return view('admin/pages/userManagement/listUsers',compact('user'));
     }
+
+    public function getAddUser() {
+        return view('admin/pages/userManagement/addUser');
+    }
+
+    public function postAddUser(Request $req) {
+        // dd($req);
+        $user = new User;
+        $user->username = $req->username;
+        $user->email = $req->email;
+        $user->role = $req->role;
+        $user->password = $req->password;
+        $user->save();
+        $all=User::all();
+        // dd($all);
+        return view('admin/pages/userManagement/listUsers',['user'=>$all]);
+    }
+
+    function deleteUser($user_id) {
+        $data = User::find($user_id);
+        $data->delete();
+        return redirect('user/listUsers');
+    }
+
+    function updateUser($user_id) {
+        $data = User::find($user_id);
+        return view('admin/pages/userManagement/updateUser',['data'=>$data]);
+    }
+
+    public function saveData(Request $req) {
+        // dd($req);
+        $data = User::find($req -> id);
+        $data->username = $req->username;
+        $data->email=$req->email;
+        $data->role=$req->role;
+        $data->save();
+        $all=User::all();
+        return view('admin/pages/userManagement/listUsers',['user'=>$all]);
+    }
 }

@@ -24,8 +24,7 @@
   				<div class="container-fluid">
                 	<ul class="nav navbar-nav">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href={{"addUser"}}>Add user</a></li>
+                        <li><a href={{"addCategory"}}>Add Category</a></li>
                 	</ul>
                     <p id="logout" class="navbar-text navbar-right"><a class="navbar-link" href="#">Logout</a></p>
                 </div>
@@ -36,20 +35,18 @@
     	<div class="col-sm-12">
         	<table class="table table-striped">
             	<tr id="tbl-first-row">
-                    <td width="20%">STT</td>
-                    <td width="20%">Username</td>
-                    <td width="20%">Email</td>
-                    <td width="20%">Role</td>
-                    <td width="20%">Operation</td>
+                    <td width="25%">STT</td>
+                    <td width="25%">Name</td>
+                    <td width="25%">Description</td>
+                    <td width="25%">Operation</td>
                 </tr>
-                @foreach($user as $users)
+                @foreach($category as $cat)
                     <tr>
-                        <td>{{$users->user_id + 1}}</td>
-                        <td>{{$users->username}}</td>
-                        <td>{{$users->email}}</td>
-                        <td>{{$users->role}}</td>
-                        <td><a href={{"delete/".$users['user_id']}}>Delete</a>
-                            <a href={{"update/".$users['user_id']}}>Update</a></td>
+                        <td>{{$cat->category_id + 1}}</td>
+                        <td>{{$cat->category_name}}</td>
+                        <td>{{$cat->category_description}}</td>
+                        <td><a href={{"delete/".$cat['category_id']}}>Delete</a>
+                            <a href={{"update/".$cat['category_id']}}>Update</a></td>
                     </tr>
                 @endforeach
 			</table>

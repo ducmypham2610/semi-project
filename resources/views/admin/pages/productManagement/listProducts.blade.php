@@ -24,10 +24,8 @@
   				<div class="container-fluid">
                 	<ul class="nav navbar-nav">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href={{"addUser"}}>Add user</a></li>
+                        <li><a href={{"addProduct"}}>Add product</a></li>
                 	</ul>
-                    <p id="logout" class="navbar-text navbar-right"><a class="navbar-link" href="#">Logout</a></p>
                 </div>
             </nav>
         </div>
@@ -36,20 +34,24 @@
     	<div class="col-sm-12">
         	<table class="table table-striped">
             	<tr id="tbl-first-row">
-                    <td width="20%">STT</td>
-                    <td width="20%">Username</td>
-                    <td width="20%">Email</td>
-                    <td width="20%">Role</td>
-                    <td width="20%">Operation</td>
+                    <td width="16%">STT</td>
+                    <td width="16%">Name</td>
+                    <td width="16%">Description</td>
+                    <td width="16%">Price</td>
+                    <td width="16%">Image</td>
+                    <td width="16%">Operation</td>
                 </tr>
-                @foreach($user as $users)
+                @foreach($product as $cat)
                     <tr>
-                        <td>{{$users->user_id + 1}}</td>
-                        <td>{{$users->username}}</td>
-                        <td>{{$users->email}}</td>
-                        <td>{{$users->role}}</td>
-                        <td><a href={{"delete/".$users['user_id']}}>Delete</a>
-                            <a href={{"update/".$users['user_id']}}>Update</a></td>
+                        <td>{{$cat->product_id + 1}}</td>
+                        <td>{{$cat->product_name}}</td>
+                        <td>{{$cat->product_description}}</td>
+                        <td>{{$cat->product_price}}</td>
+                        <td>
+                            <img src="{{$cat->product_image}}" alt="">
+                        </td>
+                        <td><a href={{"delete/".$cat['product_id']}}>Delete</a>
+                            <a href={{"update/".$cat['product_id']}}>Update</a></td>
                     </tr>
                 @endforeach
 			</table>
