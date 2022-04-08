@@ -7,7 +7,6 @@
         	<nav class="navbar navbar-default">
   				<div class="container-fluid">
                 	<ul class="nav navbar-nav">
-                        <li><a href={{"listProducts"}}>Home</a></li>
                         <li><a href={{"listProducts"}}>Products</a></li>
                 	</ul>
                 </div>

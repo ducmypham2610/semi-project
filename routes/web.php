@@ -25,7 +25,6 @@ Route::get('/manage',function() {
     return view('admin/layouts/master');
 });
 
-Route::group(['prefix' => 'user'], function() {
     Route::get('/login',[LoginController::class,'getLogin']);
     Route::post('/login',[LoginController::class,'postLogin']);
     Route::get('/register',[LoginController::class,'getRegister']);
@@ -36,9 +35,8 @@ Route::group(['prefix' => 'user'], function() {
     Route::get('/delete/{user_id}',[UserListController::class,'deleteUser']);
     Route::get('/update/{user_id}',[UserListController::class,'updateUser']);
     Route::post('/update',[UserListController::class,'saveData']);
-});
 
-Route::group(['prefix' => 'category'], function() {
+
     Route::view('/addCategory','admin.pages.categoryManagement.addCategory');
     Route::get('/listCategories',[CategoryController::class,'index']);
     Route::get('/create',[CategoryController::class,'getAdd']);
@@ -46,9 +44,8 @@ Route::group(['prefix' => 'category'], function() {
     Route::get('/delete/{category_id}',[CategoryController::class,'deleteCategory']);
     Route::get('/update/{category_id}',[CategoryController::class,'updateCategory']);
     Route::post('/update',[CategoryController::class,'saveData']);
-});
 
-Route::group(['prefix' => 'product'], function() {
+
     Route::view('/addProduct','admin.pages.productManagement.addProduct');
     Route::get('/listProducts',[ProductController::class,'index']);
     Route::get('/addProduct',[ProductController::class,'getAdd']);
@@ -56,4 +53,4 @@ Route::group(['prefix' => 'product'], function() {
     Route::get('/delete/{product_id}',[ProductController::class,'deleteProduct']);
     Route::get('/update/{product_id}',[ProductController::class,'updateProduct']);
     Route::post('/update',[ProductController::class,'saveData']);
-});
+

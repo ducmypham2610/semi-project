@@ -32,7 +32,7 @@ class UserListController extends Controller
     function deleteUser($user_id) {
         $data = User::find($user_id);
         $data->delete();
-        return redirect('user/listUsers');
+        return redirect('listUsers');
     }
 
     function updateUser($user_id) {
