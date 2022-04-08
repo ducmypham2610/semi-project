@@ -1,0 +1,1322 @@
+
+/* Icon fixed CSS */
+.app-container{
+    overflow: hidden;
+}
+
+.icon-fixed{
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: 30px;
+}
+
+.icon-fixed__img{
+    position: absolute;
+    background: #555;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    z-index: 1;
+    bottom: 0;
+    left: -20px;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+}
+
+.icon-fixed__img img{
+    width: 15px;
+    height: 15px;
+}
+
+.icon-fixed__totals{
+    position: relative;
+    background: #555;
+    color: #fff;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding-top: 8px;
+    padding-left: 4px;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+}
+
+.icon-fixed__totals-dollar{
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    font-size: 0.9rem;
+}
+
+.icon-fixed__buy-now{
+    position: absolute;
+    background: var(--red-color);
+    top: 2px;
+    left: 5px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 0.85rem;
+    line-height: 0.85rem;
+    padding: 2px 4px;
+    display: inline-block;
+}
+
+/* Slidebar CSS */
+
+.slidebar.slidebar-open{
+    display: flex;
+}
+
+.slidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    animation: growth linear 0.4s;
+}
+
+/* slider bar on mobile tablet */
+.slidebar-mobile-tablet{
+    position: fixed;
+    margin-left: auto;
+    width: 260px;
+    height: 100vh;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    background-color: #555;
+    padding: 0 30px;
+    z-index: 9999;
+    overflow-y: scroll;
+    transition: transform linear  0.4s;
+    transform: translateX(100%);
+}
+
+.slidebar-mobile-tablet__list{
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    margin: auto;
+}
+
+.slidebar-mobile-tablet__item{
+    margin: 30px 0;
+}
+
+.slidebar-mobile-tablet__link{
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.slidebar-subnav-mobile-tablet__list{
+    list-style: none;
+    padding-left: 20px;
+}
+
+.slidebar-subnav-mobile-tablet__link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    line-height: 3.5rem;
+    letter-spacing: 2px;
+}
+
+
+/* slider bar on pc */
+.slidebar__container{
+    position: fixed;
+    margin-left: auto;
+    width: 350px;
+    height: 100vh;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    background-color: var(--white-color);
+    padding: 0 30px;
+    z-index: 9999;
+    overflow-y: scroll;
+    border-left: 1px solid #ccc;
+    transition: transform linear  0.4s;
+    transform: translateX(100%);
+    /* animation: showSlidebar ease-in 0.5s; */
+}
+
+.header-input:checked ~ .slidebar{
+    display: block;
+}
+
+.header-input:checked ~ .slidebar__container{
+    transform: translateX(0);
+}
+
+.header-input:checked ~ .slidebar-mobile-tablet{
+    transform: translateX(0);
+}
+
+.slidebar__close{
+    position: fixed;
+    top: 6px;
+    right: 16px;
+}
+
+.slidebar__close-icon{
+    font-size: 2.6rem;
+    padding: 5px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.slidebar__wrap{
+    margin: 30px 0;
+}
+
+.slidebar__wrap-header{
+    text-align: center;
+}
+
+.slidebar__wrap-header-quantity{
+    margin: 0;
+    font-size: 1.4rem;
+    color: #9a9a9a;
+    letter-spacing: 2px;
+}
+
+.slidebar__wrap-header-heading{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #555;
+    margin: 10px 0; 
+}
+
+.slidebar__wrap-list{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.slidebar__wrap-item{
+    display: flex;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.slidebar__wrap-item a{
+    display: block;
+    text-decoration: none;
+}
+
+.slidebar__wrap-img{
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+    border-radius: 2px;
+    letter-spacing: 2px;
+}
+
+.slidebar__wrap-info-place{
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #555;
+    margin: 4px 0 0;
+    letter-spacing: 1px;
+}
+
+.slidebar__wrap-info-location{
+    font-size: 1.5rem;
+    margin: 15px 0;
+    line-height: 1.4rem;
+    color: #9a9a9a;
+    letter-spacing: 2px;
+}
+
+.slidebar__wrap-info-location-icon{
+    margin-right: 2px;
+    opacity: 0.8;
+}
+
+.slidebar__wrap-info-price{
+    margin-top: 20px;
+}
+
+
+
+/* Header CSS */
+.header__index{
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)), 
+                      url('https://www.nhatminhlaptop.vn/Upload/2021/4/5/asus-rog-cu103528.jpg');
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 10px 50px;
+    z-index: 1000;
+}
+
+
+.header__logo{
+    display: flex;
+    align-items: center;
+    width: 220px;
+    padding: 0 15px;
+}
+
+.header__logo-img{
+    width: 160px;
+    position: relative;
+    display: block;
+}
+
+
+.header__navbar{
+    margin-right: 15%;
+}
+
+.header__navbar-list{
+    padding-left: 0;
+}
+
+.header__navbar-item{
+    display: inline-block;
+    position: relative;
+}
+
+.header__navbar-item-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    float: right;
+    margin: 14px 0;
+    padding: 0 16px;
+    letter-spacing: 2px;
+    line-height: 36px;
+}
+
+.header-btn{
+    background-color: var(--purple-color);
+    padding: 1px 16px;
+    margin-left: 60px;
+}
+
+/* Header subnav CSS */
+
+.header__subnav-list{
+    position: absolute;
+    top:100%;
+    width: 192px;
+    background-color: var(--white-color);
+    list-style: none;
+    padding-left: 0;
+    box-shadow: 0px 2px 5px #f1f1f1;
+    display: none;
+    z-index: 3;
+    transform-origin: top left;
+    animation: fadeIn ease-in 0.15s;
+}
+
+.header__navbar-item:hover > .header__subnav-list{
+    display: block;
+}
+
+.header__subnav-item{
+    display: block;
+    padding: 15px 25px;
+    border-bottom: 1px solid #f1f1f1 ;
+}
+
+.header__subnav-item:hover{
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.header__subnav-item-quanlity--hot a::after {
+    content: "HOT";
+    background-color: #f76570;
+    border-radius: 3px;
+    float: right;
+    font-size: 1rem;
+    padding: 3px 5px;
+    color: var(--white-color);
+    line-height: 1rem;
+}
+
+.header__subnav-item-have-subnav > a::after {
+    content: "";
+    float: right;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #9a9a9a;
+    position: relative;
+    top: 4px;
+}
+
+.header__subnav-item-have-subnav{
+    position: relative;
+}
+
+.header__subnav-item-have-subnav .header__subnav-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-left: 190px;
+}
+
+.header__subnav-item-have-subnav .header__subnav-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 25px;
+    height: 100%;
+}
+
+.header__subnav-item-quanlity--best a::after {
+    content: "BEST";
+    background-color: #14b9d5;
+    border-radius: 3px;
+    float: right;
+    font-size: 1rem;
+    padding: 3px 5px;
+    color: var(--white-color);
+    line-height: 1rem;
+}
+
+.header__subnav-item-quanlity--new a::after {
+    content: "NEW";
+    background-color: #1bbc9b;
+    border-radius: 3px;
+    float: right;
+    font-size: 1rem;
+    padding: 3px 5px;
+    color: var(--white-color);
+    line-height: 1rem;
+}
+
+.header__subnav-item-have-subnav:hover .header__subnav-list {
+    display: block;
+}
+
+.header__subnav-link{
+    font-size: 1.4rem;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 400;
+    width: 100%;
+    letter-spacing:2px ;
+}
+
+.header-slide__menu{
+    background-color: transparent;
+    border: none;
+}
+
+.header-slide__menu-img{
+    width: 25px;
+    opacity: 0.5;
+    padding:25px 0 ;
+    cursor: pointer;
+}
+
+/* Headder content CSS*/
+
+.header-content{
+    padding: 160px 160px 200px 160px;
+}
+
+.header-content__wrap{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin: auto;
+
+}
+
+.header-content__heading{
+    text-align: center;
+    line-height: 5rem;
+}
+
+.header-content__heading-title{
+    position: relative;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.header-content__desc{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: var(--white-color);
+    text-align: center;
+    padding-top: 34px;
+    letter-spacing: 4px;
+}
+
+.header-content__search{
+    border-radius: 40px;
+    display: flex;
+    flex: 1;
+    min-width: 35%;
+    align-items: center;
+    background-color: var(--white-color);
+    margin: 65px 0;
+}
+
+.header-content__search-input{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    position: relative;
+    padding: 0 25px;
+    min-width: 50%;
+}
+
+.header-content__search-input-wrap{
+    border: none;
+    outline: none;
+    opacity: 0.6;
+    background:var(--white-color);
+    line-height: 5rem;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    width: 92%;
+}
+
+.header-content__search-input-wrap:focus ~ .header-content__search-history{
+    display: block;
+}
+
+.header-content__search-history{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 1px);
+    width: 100%;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 100;
+}
+
+.header-content__search-history-heading{
+    color: #a1a1a2;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 14px 0 14px 28px;
+    cursor: pointer;
+    margin: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.header-content__search-history-list{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.header-content__search-history-item a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #a1a1a2;
+    line-height: 4rem;
+    padding-left: 28px;
+}
+
+.header-content__search-history-item:last-child{
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header-content__search-history-heading:hover{
+    border-radius: 10cm;
+}
+.header-content__search-history-item:hover{
+    background-color:#f6f6f6;
+    cursor: pointer;
+}
+
+
+.header-content__search-icon {
+    position: absolute;
+    font-size: 2.4rem;
+    right: 25px;
+    top: 13px;
+    color: #a1a1a2;
+    cursor: pointer;
+}
+
+.header-content__nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-content__nav-item{
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 112px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-content__nav-item-img{
+    width: 40px;
+}
+
+.header-content__nav-item-title{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--white-color);
+    letter-spacing: 2px;
+}
+
+/* destinations*/
+
+.destinations{
+    width: 1200px;
+    margin: 66px auto 0;
+    text-align: center;
+} 
+
+.destinations__wrap {
+    margin: 0;
+}
+
+.travel{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+} 
+
+.travel__img{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.travel__fadeOut{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 12px;
+    background: linear-gradient(to bottom, rgba(101,100,96,0) 0%,rgba(101,100,96,0.1) 60%,rgba(101,100,96,0.65) 100%);
+}
+
+.travel__fadeOut-icon-img{
+    position: absolute;
+    width: 40px;
+    top: 25px;
+    left: 25px;
+}
+
+.travel__fadeOut-desc {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+    height: 50px;
+    left: 25px;
+    bottom: 25px;
+}
+
+.travel__fadeOut-desc-head{
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 2.2rem;
+    color: var(--white-color);
+    position: absolute;
+    left: 0;
+    min-width: 93%;
+    text-align: left;
+}
+
+.travel__fadeOut-desc-title{
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    min-width: 150px;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+}
+
+.travel__fadeIn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 12px;
+    background-color: var(--blue-color);
+    display: flex;
+    opacity: 0;
+    transition: opacity ease-out 0.8s;
+}
+
+.travel:hover .travel__fadeIn{
+    opacity: 1;
+    transition: opacity ease-out 0.8s;
+}
+
+.travel__fadeIn-wrap{
+    margin: auto;
+    text-align: center;
+}
+
+.travel__fadeIn-head{
+    font-size: 2.2rem;
+    line-height: 2rem;
+    color: var(--white-color);
+    margin: 20px 0;
+}
+
+.travel__fadeIn-list{
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.travel__fadeIn-item-link{
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.travel__fadeIn-btn{
+    margin-top: 20px;
+    background-color: var(--white-color);
+    color: var(--blue-color);
+}
+
+
+/* moment */
+.moment{
+    background-image: url(../img/bannergiua.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 70px 0;
+    margin-top: 78px;
+    display: flex;
+    align-items: center;
+    height: 350px;
+}
+
+.moment__text-wrap{
+    width: 50%;
+}
+
+.moment__text{
+    float: right;
+    padding-right: 8%;
+}
+
+.moment__text-small{
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    font-weight: 700;
+    margin: 0 auto;
+    color: var(--white-color);
+}
+
+.moment__text-large{
+    font-size: 5rem;
+    line-height: 5rem;
+    font-weight: 700;
+    margin: 0 auto;
+    color: var(--white-color);
+}
+
+.moment__input{
+    width: 50%;
+}
+
+.moment__input-btn{
+    float: left;
+    margin-left: 10%;
+    background-color: var(--white-color);
+    color: #f76570;
+    align-items: center;
+}
+
+/* Featured-place CSS */
+
+.featured-place{
+    width: 1200px;
+    margin: 66px auto 0;
+}
+
+.featured-place__wrap{
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.featured-place__content{
+    width: 400px;
+}
+
+.featured-place__header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 38px;
+}
+
+.featured-place__header-desc{
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+.featured-place__header-heading{
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    font-weight: bold;
+    color: #555;
+    margin-top: 20px;
+}
+
+.featured-place__pharagrap-item{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+.featured-place__price{
+    margin: 35px 0;
+}
+
+.featured-place__price-old{
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #dadada;
+    text-decoration: line-through;
+    margin-right: 15px;
+}
+
+.featured-place__price-sale{
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #555;
+}
+
+.featured-place__price-lable{
+    font-size: 1.4rem;
+    margin-left: 15px;
+    line-height: 2.4rem;
+    color: #555;
+}
+
+.btn-green{
+    background-color: var(--green-color);
+    width: 42%;
+} 
+
+.featured-place__img-time{
+    width: 800px;
+    padding: 0 15px 0 35px;
+    position: relative;
+}
+
+.light-bar{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    transform: translateX(-50%);
+}
+
+.bullet{
+    margin: 10px;
+    width: 60px;
+    height: 3px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+} 
+
+.bullet:hover{
+    background-color: var(--white-color);
+}
+
+.bullet--selected{
+    background-color: #fff;
+}
+
+.featured-place__img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.featured-place__time {
+    display: flex;
+    width: 490px;
+    background-color: var(--blue-color);
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.separate{
+    position: relative;
+} 
+
+.cross-separate::after {
+    content: "/";
+    position: absolute;
+    top: 26px;
+    right: -9px;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 6.8rem;
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.featured-place__item{
+    flex: 1;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.featured-place__item-number{
+    font-size: 2rem;
+    line-height: 3.5rem;
+    margin-top: 26px;
+}
+
+.featured-place__item-text{
+    font-size: 1.8rem;
+    line-height: 1.3rem;
+    margin: 8px 0 26px 0;
+}
+
+.featured-place__options{
+    position: relative;
+    margin: 0;
+}
+
+.featured-place__options-item{
+    display: flex;
+}
+
+.featured-place__options-item-img{
+    position: absolute;
+    width: 50px;
+}
+
+.featured-place__options-wrap{
+    margin-left: 70px;
+}
+
+.featured-place__options-wrap-heading{
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: #555;
+    margin: 0;
+}
+
+.featured-place__options-wrap-content{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    margin: 20px 0;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+.featured-place__options-wrap-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--blue-color);
+    letter-spacing: 2px;
+}
+
+/* Discover CSS */
+.discover{
+    display: flex;
+    width: 100%;
+    margin-top: 85px;
+    height: 250px;
+}
+
+.discover__item-city{
+    background-image: url('https://www.anphatpc.com.vn/media/news/0405_OpffRYKoL51gSQkH.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.discover__item{
+    width: 50%;
+    padding: 60px 15px;
+    text-align: center;
+}
+
+.discover__item-desc{
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.discover__item-heading{
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    color: var(--white-color);
+    margin: 0 0 34px
+}
+
+.discover__item-nature{
+    background-image: url('https://minhancomputer.com/media/news/303_vga_30_series_get_backpack_1920x740.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.text-orange{
+    color: var(--orange-color);
+}
+
+.text-green{
+    color: var(--green-color);
+}
+
+.discover-btn{
+    background-color: var(--white-color);
+    margin-top: 60px;
+}
+
+/* OUR PACKAGES CSS */
+
+.promotion{
+    width: 1200px;
+    margin: 66px auto 75px;
+} 
+
+.promotion__wrap{
+    margin: 0;
+}
+
+.promotion__item{
+    position: relative;
+    border-radius: 2px;  
+    margin-bottom: 24px;
+    transition: transform linear 0.2s;
+}
+
+.promotion__item-sale::after{
+    content: "SALE";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #555;
+    color: var(--white-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.promotion__item:hover{
+    transform: translatey(-2px);
+    transition: transform linear 0.2s;
+}
+
+.promotion__item-euro{
+    width: 100%;
+    background-image: url('https://minhancomputer.com/media/news/0904_AORUSMonitorAllNewSeries.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.promotion__item-hongkong{
+    width: 100%;
+    background-image: url('https://hanoicomputercdn.com/media/news/148_0908_pcgm_asus_tang_bh_tintuc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.promotion__item-sanfrancisco{
+    width: 100%;
+    background-image: url('https://nguyencongpc.vn/photos/8/back-to-school-co-hoi-mua-sam-tot-nhat-cho-hoc-sinh-sinh-vien.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.promotion__item-img{
+    position: relative;
+    height: 230px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.promotion__item-icon{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    right: 20px;
+    border-radius: 50%;
+}
+
+.promotion__item-icon-img{
+    width: 26px;
+    height: 26px;
+}
+
+.promotion__item-body {
+    padding: 30px;
+    float: left;
+    border: 0.5px solid #f0ecec;
+    border-radius: 2px;
+}
+
+.promotion__item-head a {
+    display: block;
+    text-decoration: none;
+}
+
+.promotion__item-head-heading{
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.promotion__item-head-location{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    color: #9a9a9a;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+.promotion__item-head-location-icon{
+    margin-right: 2px;
+}
+
+.promotion__item-desc-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-top: 0.5px solid #f0ecec;
+    border-bottom: 0.5px solid #f0ecec;
+    padding: 10px 0;
+}
+
+.promotion__item-desc-price a{
+    text-decoration: none;
+    display: block;
+}
+
+.promotion__item-desc-text{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #555;
+    letter-spacing: 2px;
+}
+
+.promotion__item-price{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    color: #555;
+}
+
+.promotion__item-price-sale{
+    font-size: 2rem;
+    text-decoration: line-through;
+    color: #9a9a9a;
+}
+
+.promotion__item-text{
+    font-size: 1.4rem;
+    color: #9a9a9a;
+    letter-spacing: 2px;
+    line-height: 2.6rem;
+
+}
+
+.promotion__item-btn{
+    text-decoration: none;
+}
+
+/* Footer CSS */
+.footer{
+    background-image: url('https://www.hanoicomputer.vn/media/news/0106_DSCF7942.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+}
+
+.footer__wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__header-with-search{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.footer__header{
+    width: 50%;
+    padding-left: 17%;
+}
+
+.footer__search{
+    width: 50%;
+}
+
+.footer__input{
+    background-color: var(--white-color);
+    color: #9a9a9a;
+    width: 250px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-left: 15px;
+}
+
+.footer__send-btn{
+    margin-left: 22px;
+}
+
+.footer__body{
+    background-color:var(--white-color);
+    display: flex;
+    padding: 35px 30px;
+
+}
+
+.footer__body-text{
+    width: 50%;
+    padding: 0 35px 0 15px;
+}
+
+.footer__body-img{
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.footer__body-paragraph{
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #9a9a9a;
+    padding: 0 0 20px;
+    letter-spacing: 2px;
+}
+
+.footer__body-socials-link{
+    text-decoration: none;
+    font-size: 22px;
+    color: #555;
+    margin: 0 18px 0 0;
+}
+
+.footer__body-socials-link:hover{
+    opacity: 0.7;
+}
+
+.footer__body-link{
+    width: 50%;
+}
+
+.footer__body-link-path-heading{
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 600;
+    color: #555;
+    letter-spacing: 1px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.footer__body-link-path-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__body-link-path-item{
+    font-size: 1.4rem;
+    line-height: 2.7rem;
+    letter-spacing: 1px;
+    color: #9a9a9a;
+}
+
+.footer__body-link-path-item:hover{
+    color: var(--blue-color);
+    cursor: pointer;
+}
+
+.footer__body-link-path-icon{
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+.footer__copyright{
+    background-color: var(--blue-color);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: var(--white-color);
+    letter-spacing: 1.5px;
+}
+

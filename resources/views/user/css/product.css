@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+/*-------------------header-----------------------*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:  35px;
+    height: 100px;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    background: rgba(166, 165, 166, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}
+.header__navbar-item-link{
+    color: black;
+}
+.header__logo{
+    display: flex;
+    align-items: center;
+    width: 220px;
+    padding: 0 15px;
+}
+
+.header__logo-img{
+    width: 160px;
+    position: relative;
+    display: block;
+}
+
+
+
+
+
+
+
+.menu{
+flex:3;
+display: flex;
+}
+.menu>li{
+    padding: 0 12px ;
+    position: relative;
+}
+.menu > li:hover .sub-menu{
+    visibility: visible;
+    top: 45px ;
+}
+
+
+  
+
+ /*-----------------contend-------------------------*/
+
+.contend{
+    width: 100%;
+    
+}
+ .banner{
+     max-width: 100%;
+     width: 80 px;
+     height: 70%;
+     margin-left: 75px;
+     margin-top: 100px;
+ }
+
+
+ .notice{
+     margin-left: 75px;
+     font-size: 12px;
+ }
+ .home{
+     font-weight: bold;
+     font-size: large;
+ }
+
+ .item-list{
+     display: block;
+ }
+
+ 
+ .product-group{
+    display:  flex;
+    color: rgb(255, 255, 255);
+    margin-left: 80px;
+    text-align: center;
+
+}
+
+.row{
+    display: flex;
+    margin-left: 30px;
+}
+.list-product-title{
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.mt-50 {
+    margin-top: 50px
+}
+
+.mb-50 {
+    margin-bottom: 50px
+}
+
+.card {
+    min-width: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 30px ;
+    border: 1px solid rgba(0, 0, 0, .125);
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    margin-left: 12%;
+    margin-top: 12%;
+    margin-left: 30px;
+    
+    
+}
+.mb-2{
+    color: rgb(255, 255, 255);
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    text-align: center;   
+    border-radius: 20px;
+}
+.img{
+    border-radius: 20px;
+}
+
+.product-img {
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+}
+.card:hover{
+    transform: translateY(-20px);
+    background-color: antiquewhite;
+    transition: 0.5s;
+}
+
+
+
+
+
+.div .a .songdetail{
+    color: rgb(255, 255, 255);  
+}
+
+.bg-cart {
+    background-color: rgb(214, 174, 99);
+    color: #fff;
+    border-radius: 30px;
+    height: 40px;
+    width: 120px;
+}
+
+.bg-cart:hover {
+    color: #fff
+}
+
+.bg-buy {
+    background-color: green;
+    color: #fff;
+    padding-right: 29px
+}
+
+.bg-buy:hover {
+    color: #fff
+}
+
+a {
+    text-decoration: none !important
+}
+
+
+/* Footer CSS */
+.footer{
+    background-image: url('https://www.hanoicomputer.vn/media/news/0106_DSCF7942.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    height: 600px;
+    width: 100%;
+  
+}
+
+.footer__wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__header-with-search{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.footer__header{
+    width: 50%;
+    padding-left: 17%;
+}
+
+.footer__search{
+    width: 50%;
+}
+
+.footer__input{
+    background-color: var(--white-color);
+    color: #9a9a9a;
+    width: 250px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-left: 15px;
+}
+
+.footer__send-btn{
+    margin-left: 22px;
+}
+
+.footer__body{
+    background-color:var(--white-color);
+    display: flex;
+    padding: 35px 30px;
+
+}
+
+.footer__body-text{
+    width: 50%;
+    padding: 0 35px 0 15px;
+}
+
+.footer__body-img{
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.footer__body-paragraph{
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #9a9a9a;
+    padding: 0 0 20px;
+    letter-spacing: 2px;
+}
+
+.footer__body-socials-link{
+    text-decoration: none;
+    font-size: 22px;
+    color: #555;
+    margin: 0 18px 0 0;
+}
+
+.footer__body-socials-link:hover{
+    opacity: 0.7;
+}
+
+.footer__body-link{
+    width: 50%;
+}
+
+.footer__body-link-path-heading{
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 600;
+    color: #555;
+    letter-spacing: 1px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.footer__body-link-path-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__body-link-path-item{
+    font-size: 1.4rem;
+    line-height: 2.7rem;
+    letter-spacing: 1px;
+    color: #9a9a9a;
+}
+
+.footer__body-link-path-item:hover{
+    color: var(--blue-color);
+    cursor: pointer;
+}
+
+.footer__body-link-path-icon{
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+.footer__copyright{
+    background-color: var(--blue-color);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: var(--white-color);
+    letter-spacing: 1.5px;
+}
+
+
+
+  
