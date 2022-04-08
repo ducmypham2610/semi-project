@@ -18,8 +18,15 @@ class CreateProductTable extends Migration
             $table->string('product_name');
             $table->string('product_description');
             $table->string('product_price');
-            $table->string('product_image');
+            $table->string('product_image')->nullable();
+            $table->integer('category_id')->unsigned();
         });
+
+        Schema::table('product', function($table) {
+        $table->foreign('category_id')
+            ->references('category_id')->on('category')
+            ->onDelete('cascade');
+    });
     }
 
     /**

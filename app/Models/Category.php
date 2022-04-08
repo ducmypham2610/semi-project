@@ -13,4 +13,8 @@ class Category extends Model
     protected $fillable = ['category_name','category_description'];
     protected $primaryKey = 'category_id';
     public $timestamps = false;
+
+    public function products() {
+        return $this->hasMany('App\Models\Product');
+    }
 }
