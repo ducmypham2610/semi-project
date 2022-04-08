@@ -1,13 +1,12 @@
 @extends('admin.layouts.master')
 @section('content')
 
-<div class="container">
+<div class="container d-flex flex-column">
     <div id="navbar" class="row">
     	<div class="col-sm-12">
-        	<nav class="navbar navbar-default">
+        	<nav class="navbar navbar-default bg-dark">
   				<div class="container-fluid">
                 	<ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
                         <li><a href={{"listProducts"}}>Products</a></li>
                 	</ul>
                 </div>

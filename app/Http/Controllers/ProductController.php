@@ -43,7 +43,7 @@ class ProductController extends Controller
         $data = Product::find($product_id);
         // dd($data);
         $data->delete();
-        return redirect('product/listProducts');
+        return redirect('listProducts');
     }
 
     public function updateProduct($product_id) {

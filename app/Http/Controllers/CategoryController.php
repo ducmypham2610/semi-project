@@ -31,7 +31,7 @@ class CategoryController extends Controller
         $data = Category::find($category_id);
         // dd($data);
         $data->delete();
-        return redirect('category/listCategories');
+        return redirect('listCategories');
     }
 
     public function updateCategory($category_id) {
