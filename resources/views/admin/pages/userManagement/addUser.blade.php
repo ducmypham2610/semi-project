@@ -14,7 +14,7 @@
     </div>
     <div class="row">
     	<div class="col-sm-6">
-        	<form action="/project-laravel/public/user/addUser" method="post">
+        	<form action="addUser" method="post">
                 @csrf
                 <div class="form-group">
                 	<label>Username</label>
@@ -27,10 +27,6 @@
                 <div class="form-group">
                 	<label>Email</label>
                     <input type="text" name="email" class="form-control" placeholder="Email" required />
-                </div>
-                <div class="form-group">
-                	<label>Role</label>
-                    <input type="text" name="role" class="form-control" placeholder="role" required />
                 </div>
                 <input type="submit" name="submit" value="Add" class="btn btn-primary" />
             </form>

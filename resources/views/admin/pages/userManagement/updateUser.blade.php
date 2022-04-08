@@ -14,7 +14,7 @@
     </div>
     <div class="row">
     	<div class="col-sm-6">
-        	<form action="/project-laravel/public/user/update" method="POST" role="form">
+        	<form action="/project-laravel/public/updateUser" method="POST" role="form">
                 @csrf
                 <div class="form-group">
                     <input type="hidden" name="id" value="{{$data['user_id']}}">

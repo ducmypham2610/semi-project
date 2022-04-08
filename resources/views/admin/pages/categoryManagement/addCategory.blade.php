@@ -14,7 +14,7 @@
     </div>
     <div class="row">
     	<div class="col-sm-6">
-        	<form action="/project-laravel/public/category/create" role="form" method="POST">
+        	<form action="/project-laravel/public/create" role="form" method="POST">
                 @csrf
                 <div class="form-group">
                 	<label>Category's name</label>

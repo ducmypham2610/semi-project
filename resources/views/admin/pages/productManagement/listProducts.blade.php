@@ -32,8 +32,8 @@
                         <td>
                             <img  src="{{ asset('img/'. $cat->product_image) }}" class="img-fluid img-thumbnail" alt="">
                         </td>
-                        <td><a href={{"delete/".$cat['product_id']}}>Delete</a>
-                            <a href={{"update/".$cat['product_id']}}>Update</a></td>
+                        <td><a href={{"deleteProduct/".$cat['product_id']}}>Delete</a>
+                            <a href={{"updateProduct/".$cat['product_id']}}>Update</a></td>
                     </tr>
                 @endforeach
 			</table>

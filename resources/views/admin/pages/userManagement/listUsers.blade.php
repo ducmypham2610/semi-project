@@ -29,8 +29,8 @@
                         <td>{{$users->username}}</td>
                         <td>{{$users->email}}</td>
                         <td>{{$users->role}}</td>
-                        <td><a href={{"delete/".$users['user_id']}}>Delete</a>
-                            <a href={{"update/".$users['user_id']}}>Update</a></td>
+                        <td><a href={{"deleteUser/".$users['user_id']}}>Delete</a>
+                            <a href={{"updateUser/".$users['user_id']}}>Update</a></td>
                     </tr>
                 @endforeach
 			</table>

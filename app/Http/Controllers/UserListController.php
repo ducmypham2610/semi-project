@@ -17,12 +17,12 @@ class UserListController extends Controller
     }
 
     public function postAddUser(Request $req) {
-        // dd($req);
         $user = new User;
         $user->username = $req->username;
         $user->email = $req->email;
-        $user->role = $req->role;
+        $user->role = 'user';
         $user->password = $req->password;
+        // dd($user);
         $user->save();
         $all=User::all();
         // dd($all);
@@ -47,6 +47,7 @@ class UserListController extends Controller
         $data->email=$req->email;
         $data->role=$req->role;
         $data->save();
+        // dd($data);
         $all=User::all();
         return view('admin/pages/userManagement/listUsers',['user'=>$all]);
     }

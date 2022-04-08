@@ -15,7 +15,7 @@
     </div>
     <div class="row">
     	<div class="col-sm-6">
-        	<form action="/project-laravel/public/product/addProduct" role="form" method="POST" enctype="multipart/form-data">
+        	<form action="/project-laravel/public/addProduct" role="form" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                 	<label>Name</label>

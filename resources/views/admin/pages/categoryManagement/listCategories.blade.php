@@ -27,8 +27,8 @@
                         <td>{{$cat->category_id}}</td>
                         <td>{{$cat->category_name}}</td>
                         <td>{{$cat->category_description}}</td>
-                        <td><a href={{"delete/".$cat['category_id']}}>Delete</a>
-                            <a href={{"update/".$cat['category_id']}}>Update</a></td>
+                        <td><a href={{"deleteCategory/".$cat['category_id']}}>Delete</a>
+                            <a href={{"updateCategory/".$cat['category_id']}}>Update</a></td>
                     </tr>
                 @endforeach
 			</table>

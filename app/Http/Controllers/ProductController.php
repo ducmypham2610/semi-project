@@ -35,6 +35,7 @@ class ProductController extends Controller
         $product->product_image = $filename;
         $product->category_id = $req ->category_id;
         $product->save();
+        // dd($product);
         $all=Product::all();
         return view('admin/pages/productManagement/listProducts',['product'=>$all]);
     }
