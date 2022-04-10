@@ -10,7 +10,7 @@ use App\Models\User;
 class LoginController extends Controller
 {
     public function getLogin() {
-        return view('user/login');
+        return view('user/pages/login');
     }
 
     public function postLogin(Request $request) {

@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserListController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/',[HomePageController::class,'getAllProduct']);
+
+Route::get('/detail/{product_id}',[HomePageController::class,'productDetail']);
 
 Route::get('/manage',function() {
     return view('admin/layouts/master');
