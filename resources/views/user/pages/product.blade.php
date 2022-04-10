@@ -42,13 +42,15 @@
 
             <p>{{$data['product_description']}}</p>
 
-            <form class="d-flex justify-content-left">
-              <!-- Default input -->
-              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-              <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
-                <i class="fas fa-shopping-cart ml-1"></i>
-              </button>
-
+            <form action="" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" value="{{$data['product_id'] }}" name="product_id">
+                <input type="hidden" value="{{$data['product_name'] }}" name="product_name">
+                <input type="hidden" value="{{$data['product_price'] }}" name="product_price">
+                <input type="hidden" value="{{$data['product_image'] }}"  name="product_image">
+                <input type="hidden" value="{{$data['product_description'] }}"  name="product_description">
+                <input type="hidden" value="1" name="product_quantity">
+                <button class="px-4 py-2 text-white bg-success rounded">Add To Cart</button>
             </form>
 
           </div>

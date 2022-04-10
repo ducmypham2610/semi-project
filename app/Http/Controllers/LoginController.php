@@ -16,14 +16,14 @@ class LoginController extends Controller
     public function postLogin(Request $request) {
         $arr = ['username' =>$request->username,'password'=>$request->password];
         if(Auth::attempt($arr)) {
-            dd('Successful');
+            return redirect('/');
         } else {
-            dd('Failed!');
+            return redirect('register');
         }
     }
 
     public function getRegister() {
-        return view('user/register');
+        return view('user/pages/register');
     }
 
     public function postRegister(Request $request) {
@@ -34,7 +34,8 @@ class LoginController extends Controller
         $user->role = 'user';
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->back()->with('Successfully!','Account created successfully!');
+        session()->flash('success', 'Your message');
+        return redirect()->route('/login');
     }
 
     public function getLogout() {
