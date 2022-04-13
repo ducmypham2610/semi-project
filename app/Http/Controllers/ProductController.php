@@ -70,10 +70,12 @@ class ProductController extends Controller
         $all=Product::all();
         return view('admin/pages/productManagement/listProducts',['product'=>$all]);
     }
+
+    public function getData(){
+        $data['img'] = ['']
+    }
 }
 
-//
-// if ($request->isMethod('POST')) {
 
 //     if($request->hasFile('images')) {
 //         $file = $request->file('images');

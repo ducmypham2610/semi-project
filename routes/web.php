@@ -54,3 +54,4 @@ Route::get('/manage',function() {
     Route::get('/update/{product_id}',[ProductController::class,'updateProduct']);
     Route::post('/update',[ProductController::class,'saveData']);
 
+  

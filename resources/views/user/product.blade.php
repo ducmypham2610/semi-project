@@ -166,15 +166,15 @@
     </div>
 
 
-
-
 <div class="card-product d-flex justify-content-center mt-50 mb-50">
     <div class="row">
         <div class="col-md-2 mt-2 mr-2">
             
             <div class="card">
                 <div class="card-body">
-                    <div class="card-img-actions"><a href="./productdetail.html"><img src="./img/product1.jpg" style="width: 199px;" alt=""></a> </div>
+                    @foreach($img as $value   )
+                    <div class="card-img-actions"><a href="./productdetail.html"><img src="{{$value}}" style="width: 199px;" alt=""></a> </div>
+                    @endforeach
                 </div>
                 <div class="card-body bg-light text-center">
                     <div class="mb-2">
@@ -188,7 +188,7 @@
             </div>
         </div>
 
-        <div class="col-md-2 mt-2 mr-2">
+<!--       <div class="col-md-2 mt-2 mr-2">
             <div class="card">
                 <div class="card-body">
                     <div class="card-img-actions"><a href="./productdetail.html"><img src="./img/product1.jpg" style="width: 199px;" alt=""></a> </div>
@@ -278,8 +278,7 @@
     <div class="product-item">
         <div class="product-group">
 			<div class="row">
-
-
+--> 
 </div>  
 </div>
 
