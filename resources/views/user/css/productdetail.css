@@ -5,9 +5,10 @@ body {
     overflow-x: hidden; }
   
   img {
-    max-width: 100%; 
-  border-radius: 10px;}
+  border-radius: 10px;
+}
   
+/* 
   .preview {
     display: -webkit-box;
     display: -webkit-flex;
@@ -42,24 +43,33 @@ body {
         margin: 0; }
       .preview-thumbnail.nav-tabs li:last-of-type {
         margin-right: 0; }
-  
-  .tab-content {
-    overflow: hidden; }
-    .tab-content img {
-      width: 100%;
-      -webkit-animation-name: opacity;
-              animation-name: opacity;
+  */
+.container{
+  width: 70%;
+}
 
-    }
-  .card {
+.preview{
+  width: 50%;
+}
+  .card-detail {
     margin-top: 50px;
     background: rgb(212, 212, 212);
     padding: 3em;
     line-height: 1.5em; 
     margin-left: 100px;
-  border-radius: 20px;
-    width: 1100px;
+    border-radius: 20px;
+    width: 100%;
 }
+
+.product-description {
+  width: 300px;
+  height: 110px;
+  overflow: visible;
+}
+.action{
+  margin-top: 250px;
+}
+
   
   @media screen and (min-width: 997px) {
     .wrapper {
@@ -97,6 +107,10 @@ body {
   
   .product-title, .rating, .product-description, .price, .vote, .sizes {
     margin-bottom: 15px;
+
+  }
+  .product-description{
+    overflow: visible;
   }
   
   .product-title {
@@ -175,38 +189,59 @@ body {
   
   /*# sourceMappingURL=style.css.map */
 
-  /*--------header-------*/
-  .header{
-    display: flex;
-    justify-content: space-between;
-    padding:  35px;
-    height: 100px;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    background: rgba(166, 29, 166, 0.3);
-    top: 0;
-    left: 0;
-    width: 100%;
-    
+  /*-------------------header-----------------------*/
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding:  35px;
+  height: 100px;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background: rgba(166, 165, 166, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)), 
+  url('https://www.nhatminhlaptop.vn/Upload/2021/4/5/asus-rog-cu103528.jpg');
+  
 }
 .header__navbar-item-link{
-    color: black;
+  color: black;
+}
+.header__navbar-item{
+  background-color: ;
 }
 .header__logo{
-    display: flex;
-    align-items: center;
-    width: 220px;
-    padding: 0 15px;
+  display: flex;
+  align-items: center;
+  width: 220px;
+  padding: 0 15px;
 }
 
 .header__logo-img{
-    width: 160px;
-    position: relative;
-    display: block;
+  width: 160px;
+  position: relative;
+  display: block;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 200px;
+  width: 1070px;
+}
 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 
 
 
@@ -217,12 +252,12 @@ flex:3;
 display: flex;
 }
 .menu>li{
-    padding: 0 12px ;
-    position: relative;
+  padding: 0 12px ;
+  position: relative;
 }
 .menu > li:hover .sub-menu{
-    visibility: visible;
-    top: 45px ;
+  visibility: visible;
+  top: 45px ;
 }
 
   /*--------container-------*/

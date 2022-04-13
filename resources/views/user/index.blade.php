@@ -33,16 +33,16 @@
                 <ul class="header__navbar-list">
 
                     <li class="header__navbar-item">
-                        <a href="product.blade.php" class="header__navbar-item-link">Laptop</a>
+                        <a href="product.html" class="header__navbar-item-link">Laptop</a>
                         <ul class="header__subnav-list">
                             <li class="header__subnav-item header__subnav-item-quanlity--hot">
-                                <a href="#" class="header__subnav-link">Search 1</a>
+                                <a href="#" class="header__subnav-link">ASUS</a>
                             </li>
                             <li class="header__subnav-item">
-                                <a href="#" class="header__subnav-link">Search 2</a>
+                                <a href="#" class="header__subnav-link">ACER</a>
                             </li>
                             <li class="header__subnav-item header__subnav-item-have-subnav">
-                                <a href="#" class="header__subnav-link">KKKKSDKN</a>
+                                <a href="#" class="header__subnav-link">DELL</a>
                                 <ul class="header__subnav-list">
                                     <li class="header__subnav-item header__subnav-item-quanlity--best">
                                         <a href="#" class="header__subnav-link">Carousel</a>
@@ -211,7 +211,7 @@
         <div class="destinations__wrap row">
             <div class="travel col l-4 m-12">
                 <div class="travel__fadeOut">
-                    <img src="./assets/img/anh1.jpg" alt="Thailandia" class="travel__img">
+                    <img src="./img/anh1.jpg" alt="Thailandia" class="travel__img">
 
                 </div>
                 <div class="travel__fadeIn">
@@ -255,7 +255,7 @@
                 </div> 
             </div>
             <div class="travel col l-4 m-12">
-                <img src="./assets/img/anh111.jpg" alt="Netherlands" class="travel__img">
+                <img src="./img/anh111.jpg" alt="Netherlands" class="travel__img">
                 
                 <div class="travel__fadeIn">
                     <div class="travel__fadeIn-wrap">
@@ -527,24 +527,17 @@
                         <ul class="footer__body-link-path-list">
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
+                                Long-Term Disability Insurance
                             </li>
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                               AAAAAA
+                                Life Insurance
                             </li>
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                               AAAAAA
+                                Duration Insurance
                             </li>
-                            <li class="footer__body-link-path-item">
-                                <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
-                            </li>
-                            <li class="footer__body-link-path-item">
-                                <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
-                            </li>
+
                         </ul>
                     </div>
                     <div class="footer__body-link-path col l-4 m-4 c-12">
@@ -552,23 +545,15 @@
                         <ul class="footer__body-link-path-list">
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
+                                Deposits
                             </li>
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                               AAAAAA
+                                Early payments
                             </li>
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
-                            </li>
-                            <li class="footer__body-link-path-item">
-                                <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
-                            </li>
-                            <li class="footer__body-link-path-item">
-                                <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
+                                Late payments
                             </li>
                         </ul>
                     </div>
@@ -577,23 +562,23 @@
                         <ul class="footer__body-link-path-list">
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
+                                Delivery Location
                             </li>
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
+                                Delivery Time
                             </li>
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
+                                Delivery Instructions
                             </li>
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                               AAAAAA
+                                Shipping Costs
                             </li>
                             <li class="footer__body-link-path-item">
                                 <i class="footer__body-link-path-icon fas fa-angle-right"></i>
-                                AAAAAA
+                                Damaged Items in Transport 
                             </li>
                         </ul>
                     </div>

@@ -318,7 +318,7 @@
 }
 
 .header-btn{
-    background-color: var(--purple-color);
+    background-color: purple;
     padding: 1px 16px;
     margin-left: 60px;
 }
@@ -686,17 +686,18 @@
     background-color: var(--blue-color);
     display: flex;
     opacity: 0;
-    transition: opacity ease-out 0.8s;
+    transition: opacity 0.5;
 }
 
 .travel:hover .travel__fadeIn{
     opacity: 1;
-    transition: opacity ease-out 0.8s;
+    transition: opacity 0.5s;
 }
 
 .travel__fadeIn-wrap{
     margin: auto;
     text-align: center;
+    opacity: 1;
 }
 
 .travel__fadeIn-head{
