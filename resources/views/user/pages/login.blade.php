@@ -5,27 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Forms</title>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 <link href="{{asset('css/datepicker3.css')}}" rel="stylesheet">
 <link href="{{asset('css/styles.css')}}" rel="stylesheet">
-
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
-
 </head>
 
-<body>
+<body class="bg-dark" >
 
-	<div class="row">
+    <div class="container-fluid w-100">
+        <div class="row">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">
-				<div class="panel-heading">Log in</div>
+				<div class="panel-heading text-center">Log in</div>
 				<div class="panel-body">
 					<form method="POST" role="form">
                         @csrf
-						<fieldset>
+						<fieldset class="">
 							<div class="form-group">
 								<input class="form-control" placeholder="Username" name="username" type="username" autofocus="">
 							</div>
@@ -37,23 +33,25 @@
 									<input name="remember" type="checkbox" value="Remember Me">Remember Me
 								</label>
 							</div>
-							<button type="submit">Login</button>
+                            <div class="form-group">
+								<a href="{{ url('register') }}">Don't have an account? Create now!</a>
+							</div>
+                            <button type="submit" class="btn btn-lg bg-success">Login</button>
+
 						</fieldset>
 					</form>
 				</div>
 			</div>
 		</div><!-- /.col-->
 	</div><!-- /.row -->
-
-
-
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+    </div>
+	<script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
+	<script src="{{asset('js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('js/chart.min.js')}}"></script>
+	<script src="{{asset('js/chart-data.js')}}"></script>
+	<script src="{{asset('js/easypiechart.js')}}"></script>
+	<script src="{{asset('js/easypiechart-data.js')}}"></script>
+	<script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
 	<script>
 		!function ($) {
 			$(document).on("click","ul.nav li.parent > a > span.icon", function(){

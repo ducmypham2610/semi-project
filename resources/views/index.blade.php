@@ -40,7 +40,7 @@
                 </a>
 
                 <h4 class="font-weight-bold text-info">
-                  <strong>{{$product->product_price}}</strong>
+                  <strong>${{$product->product_price}}</strong>
                 </h4>
 
               </div>

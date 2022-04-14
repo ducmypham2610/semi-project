@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
     public function cart() {
-        $products = DB::table('cart')->join('product','cart.product_id','=','product.product_id')->select('product.*','cart.cart_id')->get();
+        $products = DB::table('cart')
+        ->join('product','cart.product_id','=','product.product_id')
+        ->join('users','users.user_id','=','cart.user_id')
+        ->select('product.*','cart.cart_id','users.username')->where('users.user_id',Auth()->user()->user_id)->get();
         $total = 0;
         foreach($products as $pro) {
             $total += ($pro->product_price * 1);
