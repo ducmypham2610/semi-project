@@ -6,24 +6,26 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Product;
 
 class LoginController extends Controller
 {
     public function getLogin() {
-        return view('user/login');
+        return view('user/pages/login');
     }
 
     public function postLogin(Request $request) {
         $arr = ['username' =>$request->username,'password'=>$request->password];
         if(Auth::attempt($arr)) {
-            dd('Successful');
+            $product = Product::paginate(10);
+            return view('index',compact('product'));
         } else {
-            dd('Failed!');
+            return redirect('register');
         }
     }
 
     public function getRegister() {
-        return view('user/register');
+        return view('user/pages/register');
     }
 
     public function postRegister(Request $request) {
@@ -34,7 +36,8 @@ class LoginController extends Controller
         $user->role = 'user';
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->back()->with('Successfully!','Account created successfully!');
+        // session()->flash('success', 'Your message');
+        return redirect('/login');
     }
 
     public function getLogout() {
