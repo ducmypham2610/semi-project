@@ -35,22 +35,18 @@
               </h1>
 
             <h4 class="h4 text-info">
-              <span>{{$data['product_price']}}</span>
+              <span>${{$data['product_price']}}</span>
             </h4>
 
             <p class="lead font-weight-bold">Description</p>
 
             <p>{{$data['product_description']}}</p>
 
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('add-to-cart') }}" method="POST">
                 @csrf
-                <input type="hidden" value="{{$data['product_id'] }}" name="product_id">
-                <input type="hidden" value="{{$data['product_name'] }}" name="product_name">
-                <input type="hidden" value="{{$data['product_price'] }}" name="product_price">
-                <input type="hidden" value="{{$data['product_image'] }}"  name="product_image">
-                <input type="hidden" value="{{$data['product_description'] }}"  name="product_description">
+                <input type="text" value="{{$data['product_id'] }}" name="product_id">
                 <input type="hidden" value="1" name="product_quantity">
-                <button class="px-4 py-2 text-white bg-success rounded">Add To Cart</button>
+                <button class="px-4 py-2 text-white bg-success rounded">Add to cart</button>
             </form>
 
           </div>
