@@ -30,6 +30,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
+        'email',
         'remember_token',
     ];
 
@@ -43,7 +44,7 @@ class User extends Authenticatable
     ];
 
     protected $table = "users";
-    protected $fillable = ['username','fullname','email','password','role'];
+    protected $fillable = ['username','fullname','email','password','role','cart'];
     protected $primaryKey = 'user_id';
     public $timestamps = false;
 }
