@@ -6,7 +6,7 @@
         	<nav class="navbar navbar-default">
   				<div class="container-fluid">
                 	<ul class="nav navbar-nav">
-                        <li><a href={{"addProduct"}}>Add product</a></li>
+                        <li><a href="{{ url('addProduct') }}">Add product</a></li>
                 	</ul>
                 </div>
             </nav>

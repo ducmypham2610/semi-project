@@ -15,7 +15,7 @@
     </div>
     <div class="row">
     	<div class="col-sm-6">
-        	<form action="/project-laravel/public/product/update" method="POST" role="form" enctype="multipart/form-data">
+        	<form action="{{ url('updateProduct') }}" method="POST" role="form" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <input type="hidden" name="id" value="{{$data['product_id']}}">

@@ -54,6 +54,7 @@ class ProductController extends Controller
     }
 
     public function saveData(Request $req) {
+        // dd($req);
         if($req->hasFile('product_image')) {
             $file = $req->file('product_image');
             // $path = $request->file('images')->store('images/products');

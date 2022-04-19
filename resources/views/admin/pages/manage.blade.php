@@ -23,10 +23,10 @@
         	<nav class="navbar navbar-default">
   				<div class="container-fluid">
                 	<ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href={{"category/listCategories"}}>Category</a></li>
-                        <li><a href={{"product/listProducts"}}>Product</a></li>
-                        <li><a href={{"user/listUsers"}}>User</a></li>
+                        <li><a href="{{ url('manage') }}">Home</a></li>
+                        <li><a href="{{ url('listCategories') }}">Category</a></li>
+                        <li><a href="{{ url('listProducts') }}">Product</a></li>
+                        <li><a href="{{ url('listUsers') }}">User</a></li>
                 	</ul>
                 </div>
             </nav>

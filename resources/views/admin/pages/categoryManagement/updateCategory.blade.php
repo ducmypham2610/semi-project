@@ -20,11 +20,11 @@
                     <input type="hidden" name="id" value="{{$data['category_id']}}">
                 </div>
                 <div class="form-group">
-                	<label>Username</label>
-                    <input type="text" name="category_name" class="form-control" placeholder="Username" value="{{$data['category_name']}}" required />
+                	<label>Category name</label>
+                    <input type="text" name="category_name" class="form-control" placeholder="Category name" value="{{$data['category_name']}}" required />
                 </div>
                 <div class="form-group">
-                    <label>Email</label>
+                    <label>Category description</label>
                     <input type="text" name="category_description" class="form-control" placeholder="Description" value="{{$data['category_description']}}"" required />
                 </div>
                 <input type="submit" name="submit" value="Save" class="btn btn-primary" />
