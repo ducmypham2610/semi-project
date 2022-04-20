@@ -31,7 +31,7 @@
                 	<label>Role</label>
                     <input type="text" name="role" class="form-control" placeholder="role" value="{{$data['role']}}" required />
                 </div>
-                <input type="submit" name="submit" value="Save" class="btn btn-primary" />
+
             </form>
         </div>
     </div>
