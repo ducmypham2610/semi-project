@@ -44,7 +44,7 @@
 
             <form action="{{ url('add-to-cart') }}" method="POST">
                 @csrf
-                <input type="text" value="{{$data['product_id'] }}" name="product_id">
+                <input type="hidden" value="{{$data['product_id'] }}" name="product_id">
                 <input type="hidden" value="1" name="product_quantity">
                 <button class="px-4 py-2 text-white bg-success rounded">Add to cart</button>
             </form>

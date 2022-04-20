@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -74,3 +75,7 @@ Route::post('/updateProduct',[ProductController::class,'saveData']);
 Route::get('/cart',[CartController::class,'cart']);
 Route::post('add-to-cart',[CartController::class,'addToCart']);
 Route::get('/removeFromCart/{cart_id}',[CartController::class,'removeFromCart']);
+
+///////////////////////////////////
+/////// SEARCH
+Route::get('search',[SearchController::class,'search']);
