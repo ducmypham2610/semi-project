@@ -5,7 +5,7 @@
     	<div class="col-sm-12">
         	<nav class="navbar navbar-default">
   				<div class="container-fluid">
-                	<ul class="nav navbar-nav">
+
 
                 	</ul>
                     <p id="logout" class="navbar-text navbar-right"><a class="navbar-link" href="#">Logout</a></p>
