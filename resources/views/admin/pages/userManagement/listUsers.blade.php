@@ -6,7 +6,7 @@
         	<nav class="navbar navbar-default">
   				<div class="container-fluid">
                 	<ul class="nav navbar-nav">
-                        <li><a href={{"addUser"}}>Add user</a></li>
+
                 	</ul>
                     <p id="logout" class="navbar-text navbar-right"><a class="navbar-link" href="#">Logout</a></p>
                 </div>
